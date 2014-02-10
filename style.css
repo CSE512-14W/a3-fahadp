@@ -1,0 +1,104 @@
+/* mostly derived from crossfilter's default example */
+
+body {
+  font-family: "sans-serif";
+}
+
+#charts {
+  padding: 10px 0;
+}
+
+.chart {
+  display: inline-block;
+  height: 250px;
+  margin: 0 20px 10px;
+  float:left;clear:both;
+  background:#eFeFeF;
+}
+.reset{
+	position:relative;
+	top:0px;
+	right:0px;
+}
+
+.title{
+	font-weight: bold;
+	margin-bottom:20px;
+	}
+
+.content-div{
+	margin-left:auto;
+	margin-right:auto;
+}
+	
+.chart-div{
+	float:left;
+	background:dimgrey;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+.reset {
+  padding-left: 17px;
+  padding-right: 20px;
+  font-size: smaller;
+  color: #777;
+  background-image: url('refresh.png');
+  background-repeat:no-repeat;
+  float:right;
+}
+
+.background.bar {
+  fill: #ccc;
+}
+
+.foreground.bar {
+  fill: rgb(245, 83, 74);
+  fill: #1f77b4;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 12px sans-serif;
+}
+
+.axis-plain {
+	fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+	font: 12px sans-serif;
+}
+
+.brush rect.extent {
+  fill: steelblue;
+  fill-opacity: .125;
+}
+
+.brush .resize path {
+  fill: #eee;
+  stroke: #666;
+}
+
+#val-chart {
+  width: 430px;
+}
+
+#val2-chart {
+  width: 430px;
+}
+
+#val3-chart {
+  width: 430px;
+}
+
+#map-div {
+	border:1px solid dimgrey;
+  width: 598px;
+  height: 848px;
+  float:left;
+}
