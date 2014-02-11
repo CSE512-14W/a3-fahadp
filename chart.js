@@ -3,6 +3,8 @@
 // A direct copy from the crossfilter example:
 // https://github.com/square/crossfilter/blob/50227903a5567d24c0d38141a5e94b5dec932b4c/index.html
 
+var activeFilters=0;
+
 function barChart() {
   if (!barChart.id) {
     barChart.id = 0;
@@ -147,11 +149,16 @@ function barChart() {
           g.selectAll("#clip-" + id + " rect")
               .attr("x", 0)
               .attr("width", width);
+		  activeFilters--;
+	      if(activeFilters==0)
+		    d3.selectAll(".y").style("visibility","visible");
         } else {
           var extent = brush.extent();
           g.selectAll("#clip-" + id + " rect")
               .attr("x", x(extent[0]))
               .attr("width", x(extent[1]) - x(extent[0]));
+		  activeFilters++;
+	      d3.selectAll(".y").style("visibility","hidden");
         }
       }
 
@@ -190,6 +197,8 @@ function barChart() {
   brush.on("brushstart.chart", function() {
     var div = d3.select(this.parentNode.parentNode.parentNode);
     div.select(".title a").style("visibility", "visible");//.style("display", null)
+	d3.selectAll(".y").style("visibility","hidden");
+	activeFilters++;
   });
 
   brush.on("brush.chart", function() {
@@ -214,6 +223,9 @@ function barChart() {
       div.select(".title a").style("visibility", "hidden");//.style("display", "none")
       div.select("#clip-" + id + " rect").attr("x", null).attr("width", "100%");
       dimension.filterAll();
+	  activeFilters--;
+	  if(activeFilters==0)
+		d3.selectAll(".y").style("visibility","hidden");
     }
   });
 
