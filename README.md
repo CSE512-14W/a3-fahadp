@@ -41,6 +41,8 @@ Well this looks good and I can focus on certain values of one parameter and see 
 
 ##Final Implementation:
 
+http://cse512-14w.github.io/a3-fahadp/
+
 ![alt tag](https://raw.github.com/CSE512-14W/a3-fahadp/master/final_implement.JPG)
 
 In this interactive visualization, one can select an area of any bar chart to refine the data. The other two bar charts will show the cumulative numbers of equipment that is currently selected due the selection. The graphs are normalized, according to the highest value, so you can see the distribution of the data in each bar chart. Along with the changes in bar charts, you will see the changes in the markers on the maps too. This shows locations of the selected refrigerators. If no selection is made, map will show all equipment's location. Once a selection is made, one can reset the selection by using reset link that appear on the top-right corner of the chart. One can also slide the selection or resize the selection.
