@@ -51,6 +51,22 @@ Majority of Electric refrigerators are below 10 years of age while dual powered 
 
 Kerosene powered refrigerators are more in southern part of Benin. More functional electric refrigerators, that are at most 5 years old, are in southern part of Benin.
 
+##Development Process
+
+I started by getting right permission to use the dataset for this class. It took some back and forth emails.
+
+Once I got the permission, I converted the data to play in excel (1 hrs)
+
+Looked at the datasets and see interesting aspects in excel first (5 hrs)
+
+After I had a good idea what I want to draw and what data I am putting in visualization, I converted the data to JSON (1 hr)
+
+Looked at different examples of D3 and studied couple of libraries to help me in my visualization (4 hrs)
+
+Started working with third party code to make my visualization and kept running into issues to make the interactions the way I want it to look like (I don't know, maybe too long)
+
+Played with my visualization and learned quite a bit about my own research data. Wrote the write-up. (6 hrs) 
+
 
 ##Library/3rd Party Code Used:
 
